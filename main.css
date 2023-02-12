@@ -1,0 +1,203 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*{
+    font-family: "Varela Round", sans-serif;
+}
+body {
+  /* font-family: "Varela Round", sans-serif; */
+  min-height: 100vh;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 450px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 4rem;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;}
+
+.login-card::before{
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    inset: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transform: rotate(-6deg);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.login-card-logo{
+    margin-bottom: 2rem;
+}
+
+.login-card-logo img{
+    width:100px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer{
+    text-align: center;
+}
+
+.login-card a {
+    text-decoration: none;
+    color: #35338a;
+}
+
+.login-card a:hover{
+    text-decoration: underline;
+}
+
+.login-card-header{
+    margin-bottom: 2rem;
+}
+
+.login-card-header{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.login-card-header h1 + div{
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+.login-card-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-card-form .form-item{
+    position: relative;
+}
+
+.login-card-form .form-item .form-item-icon{
+    position: absolute;
+    top: .82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    opacity: .4;
+}
+
+.login-card-form .checkbox{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.login-card-form .form-item-other{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem*.8);
+    margin-bottom: .5rem;
+}
+
+.login-card-footer{
+    margin-top: 1.5rem;
+    font-size: calc(1rem*.8);
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="email"]{
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem * 3.5);
+    border-radius: 100px;
+    width: 100%;
+    transition: background .5s;
+}
+
+.login-card input:focus{
+    background: white;
+}
+
+.login-card input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    accent-color: black;
+}
+
+.login-card-form button{
+    background: black;
+    color: wheat;
+    padding: 1rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+
+.login-card-form button:hover{
+    background-color: rgba(0,0, 0,.81);
+    cursor: pointer;
+}
+
+.login-card-social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.login-card-social-media > div{
+    opacity: .8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: calc(1rem * .8);
+}
+
+.login-card-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-card-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 100px;
+    transition: all .5s;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.login-card-btn a:hover{
+    background: white;
+    transform: scale(1.1);
+    
+}
+
+
+/* responsiveness */
+@media(max-width:768px){
+    body{
+        padding: 2rem 0;
+    }
+
+    .login-card{
+        width: 300px;
+        padding: 2rem;
+    }
+}
+
+
